@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <tableCellView identifier="JBCellView" id="kpO-za-5PZ" customClass="JBCellView" customModule="JBTableViewMenu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="207"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJ6-1g-5l5">
+                    <rect key="frame" x="10" y="0.0" width="200" height="207"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="EVw-A5-8xQ"/>
+                    </constraints>
+                    <imageCell key="cell" lineBreakMode="charWrapping" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="cat" id="Ajp-Yd-eze"/>
+                </imageView>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yn7-NY-LXh">
+                    <rect key="frame" x="230" y="0.0" width="60" height="207"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Multiline Label" bezelStyle="round" id="HiC-DZ-Y8a">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Yn7-NY-LXh" firstAttribute="top" secondItem="kpO-za-5PZ" secondAttribute="top" id="40l-pY-udm"/>
+                <constraint firstAttribute="bottom" secondItem="kJ6-1g-5l5" secondAttribute="bottom" id="CmR-XK-Oij"/>
+                <constraint firstAttribute="trailing" secondItem="Yn7-NY-LXh" secondAttribute="trailing" constant="20" id="IJo-a8-NxE"/>
+                <constraint firstItem="Yn7-NY-LXh" firstAttribute="leading" secondItem="kJ6-1g-5l5" secondAttribute="trailing" constant="20" id="OC3-Dh-Rlg"/>
+                <constraint firstAttribute="bottom" secondItem="Yn7-NY-LXh" secondAttribute="bottom" id="cYH-MD-sNu"/>
+                <constraint firstItem="kJ6-1g-5l5" firstAttribute="top" secondItem="kpO-za-5PZ" secondAttribute="top" id="t40-GE-fGs"/>
+                <constraint firstItem="kJ6-1g-5l5" firstAttribute="leading" secondItem="kpO-za-5PZ" secondAttribute="leading" constant="10" id="uef-sW-0a4"/>
+            </constraints>
+            <connections>
+                <outlet property="imagView" destination="kJ6-1g-5l5" id="mPt-tB-cpH"/>
+                <outlet property="myLabel" destination="Yn7-NY-LXh" id="w3c-XT-NN0"/>
+            </connections>
+            <point key="canvasLocation" x="-60" y="-306.5"/>
+        </tableCellView>
+    </objects>
+    <resources>
+        <image name="cat" width="244" height="207"/>
+    </resources>
+</document>
